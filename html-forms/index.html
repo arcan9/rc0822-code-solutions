@@ -5,34 +5,43 @@
   </head>
   <body>
     <h1>Coding Form</h1>
-    <form action="">
-      Email
-      <br>
-      <input type="text" name="email"/>
-      <br>
-      Why is coding cool?
-      <br>
-      <select>
-        <option selected>Select an option</option>
-        <option>Because it's fun</option>
-        <option>Because it's interesting</option>
-        <option>Because it's powerful</option>
-      </select>
-      <p>Favorite Language (choose one)</p>
-      <p>
-        <input type="radio" name="language" value="HTML">HTML
-        <input type="radio" name="language" value="CSS">CSS
-        <input type="radio" name="language" value="JavaScript">Javascript
-      </p>
-      <p>Would you like to sign up for more information?</p>
-      <p>
-        <input type="checkbox" name="sign up" value="sign up">Sign me up!
+    <form>
+      <label for="email">Email
         <br>
-        Comments
+        <input type="text" name="email" id="email" />
+      </label>
+      <br>
+      <div>
+        <label for="why-is-it-cool">Why is coding cool?</label>
         <br>
-        <textarea name="comments" cols="30" rows="10"></textarea>
+        <select id="why-is-it-cool">
+          <option selected>Select an option</option>
+          <option value="fun">Because it's fun</option>
+          <option value="interesting">Because it's interesting</option>
+          <option value="powerful">Because it's powerful</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label>Favorite Language (choose one)</label>
         <br>
-        <input type="submit" name="submit" value="Submit">
+        <br>
+        <input type="radio" name="language" value="HTML" id="html"><label for="html">HTML</label>
+        <input type="radio" name="language" value="CSS" id="css"><label for="css">CSS</label>
+        <input type="radio" name="language" value="JavaScript" id="javascript"><label for="javascript">Javascript</label>
+      </div>
+      <br>
+      <div>
+        <label for="sign-up">Would you like to sign up for more information?</label>
+        <br>
+        <br>
+        <input type="checkbox" name="sign up" value="sign up" id="sign-up">Sign me up!
+      </div>
+      <label for="comments">Comments</label>
+      <br>
+      <textarea name="comments" cols="30" rows="10" id="comments"></textarea>
+      <br>
+      <input type="submit" name="submit" value="Submit">
       </p>
     </form>
 
