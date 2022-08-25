@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-one-fourth {
+  flex-basis: calc(100% / 4);
+}
+
+.column-two-thirds {
+  width: 60%;
+}
+
+img {
+  width: 100%;
+}
