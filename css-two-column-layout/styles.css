@@ -1,0 +1,69 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-half {
+  display: flex;
+  flex-basis: calc(100% / 2);
+  margin: 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  width: 600px;
+  margin: inherit;
+  margin-bottom: 45px;
+}
+
+h1 {
+  font-size: 48px;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  padding: 0 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 2;
+  font-size: small;
+  padding: 0 30px;
+}
+
+img {
+  width: 100px;
+}
+
+button {
+  display: flex;
+  margin: 40px auto;
+  padding: 8px 30px;
+  background-color: white;
+  font-family: Karla, sans-serif;
+  font-weight: bold;
+  color: crimson;
+  border: 2px solid crimson;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
