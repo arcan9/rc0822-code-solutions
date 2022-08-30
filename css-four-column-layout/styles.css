@@ -1,0 +1,59 @@
+body {
+  font-family: Barlow, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-fourth {
+  flex-basis: calc(100% / 4);
+  margin: 0 auto;
+}
+
+.icon img {
+  display: flex;
+  padding: 20px;
+  width: 65px;
+  margin: auto;
+}
+
+.app-info {
+  text-align: center;
+}
+
+.app-info h2 {
+  font-size: 17px;
+  margin: 0 auto 30px;
+}
+
+.app-info p {
+  font-size: 13px;
+}
+
+.row > .col-fourth:nth-child(n+1) {
+  margin-right: 40px;
+}
+
+.row > .col-fourth:last-child {
+  margin-right: auto;
+}
