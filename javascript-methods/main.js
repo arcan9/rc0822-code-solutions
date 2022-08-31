@@ -39,8 +39,8 @@ var css = {
   author: 'Lea Verou'
 };
 
-library.push(js.title);
-library.unshift(css.title);
+library.push(js);
+library.unshift(css);
 library.splice(1, 1);
 
 console.log('value of library:', library);
