@@ -1,0 +1,31 @@
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(255 248 240);
+}
+
+body.dark-mode {
+  background-color: #1d1f20;
+}
+
+.light-bulb {
+  height: 225px;
+  width: 225px;
+  background-color: #fcf576;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 30px #fffdc1;
+}
+
+.light-bulb.off {
+  height: 225px;
+  width: 225px;
+  background-color: #292c30;
+  border-radius: 50%;
+  box-shadow: 0 -20px #131213;
+}
