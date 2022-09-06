@@ -1,0 +1,56 @@
+.hero-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/product/product-header.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.charting-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.charting-container h2 {
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  margin: 55px 130px;
+}
+
+.col-half {
+  flex-basis: calc(100% / 2);
+  text-align: left;
+}
+
+.grey-bg {
+  padding-bottom: 35px;
+}
+
+.col-text-section-1 {
+  margin-left: 95px;
+  width: 465px;
+}
+
+.col-text-section-2 {
+  margin-right: 95px;
+  width: 465px;
+}
+
+.quote {
+  font-family: "Tiempos Headline", serif;
+}
+
+.col-half img {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.img-3 {
+  margin-top: 65px;
+  padding: 20px;
+}
