@@ -4,6 +4,25 @@ body {
   flex-direction: column;
 }
 
+.navbar a {
+  text-decoration: none;
+  color: rgb(170 170 170);
+}
+
+.main a {
+  text-decoration: none;
+  color: #294464;
+}
+
+.navbar a:hover,
+.navbar a:visited {
+  color: #294464;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
 h1,
 h2 {
   font-family: "Tiempos Headline", serif;
@@ -63,11 +82,6 @@ footer img {
   margin-top: 20px;
   height: 400px;
   width: 100%;
-}
-
-.width-85 {
-  width: 85%;
-  margin: 0 auto;
 }
 
 button {
@@ -146,15 +160,6 @@ li {
   height: 600px;
 }
 
-.hero-img {
-  height: 100%;
-  width: 100%;
-  background-image: url("images/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-}
-
 .hero-text {
   position: relative;
   top: 105px;
@@ -186,25 +191,6 @@ li {
   position: absolute;
 }
 
-.clinicians-container {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-half {
-  flex-basis: calc(100% / 2);
-  text-align: center;
-}
-
-.col-half p {
-  margin: 12px 0;
-}
-
 .learn-more {
   position: relative;
   overflow: hidden;
@@ -222,17 +208,6 @@ li {
 }
 
 .ready h2 {
-  margin-bottom: 0;
-}
-
-.clinicians-container header {
-  padding-bottom: 60px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.clinicians-container h2 {
   margin-bottom: 0;
 }
 
