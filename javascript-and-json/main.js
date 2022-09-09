@@ -23,6 +23,8 @@ var jsonValue = JSON.stringify(books);
 console.log('value of jsonValue:', jsonValue);
 console.log('  type of jsonValue:', typeof jsonValue);
 
-var jsonParsed = JSON.parse(jsonValue);
-console.log('value of jsonParsed:', jsonParsed);
-console.log('  type of jsonParsed:', typeof jsonParsed);
+var string = '{"student": "Graham Bell", "numberId": "12345-67"}';
+
+var stringParsed = JSON.parse(string);
+console.log('value of stringParsed:', stringParsed);
+console.log('  type of stringParsed:', typeof stringParsed);
