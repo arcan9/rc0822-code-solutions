@@ -1,0 +1,54 @@
+.hero-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/implementation/implementation-header.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.roi-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.roi-container header {
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roi-container h1 {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 38px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-half {
+  margin: 0 auto 15px;
+}
+
+.col-half p {
+  margin: 12px 0;
+  width: 700px;
+}
+
+.width-85 {
+  width: 85%;
+  margin: 0 auto;
+}
+
+span.number {
+  font-size: 36px;
+  font-family: "Tiempos Headline", serif;
+}
+
+span.list-title {
+  font-size: 20px;
+}
