@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  width: 450px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dot {
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
