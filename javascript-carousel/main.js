@@ -26,7 +26,6 @@ function nextImgShow() {
 startInterval();
 
 var $dotsContainer = document.querySelector('.dots-container');
-// var $dots = document.querySelectorAll('.dots-container i');
 
 $dotsContainer.addEventListener('click', handleClick);
 
@@ -35,36 +34,24 @@ function handleClick(event) {
 
     if (event.target.id === 'btn-1') {
       carouselImage.src = imagesArray[0];
+      counter = imagesArray.indexOf(imagesArray[0]);
     } else if (event.target.id === 'btn-2') {
       carouselImage.src = imagesArray[1];
+      counter = imagesArray.indexOf(imagesArray[1]);
     } else if (event.target.id === 'btn-3') {
       carouselImage.src = imagesArray[2];
+      counter = imagesArray.indexOf(imagesArray[2]);
     } else if (event.target.id === 'btn-4') {
       carouselImage.src = imagesArray[3];
+      counter = imagesArray.indexOf(imagesArray[3]);
     } else if (event.target.id === 'btn-5') {
       carouselImage.src = imagesArray[4];
+      counter = imagesArray.indexOf(imagesArray[4]);
     }
-
-    // counter++;
-
-    if (counter < imagesArray.length - 1) {
-      counter++;
-    }
-
-    if (counter > 0) {
-      counter--;
-    }
-
-    // for (var i = 0; i < $dots.length; i++) {
-    //   if ($dots[i] === event.target) {
-    //     carouselImage.src = imagesArray[counter];
-    //   }
-    // }
     stopInterval();
 
   }
 }
-// startInterval();
 
 var leftArrow = document.querySelector('.left-arrow');
 var rightArrow = document.querySelector('.right-arrow');
@@ -73,14 +60,17 @@ rightArrow.addEventListener('click', function () {
   counter++;
 
   counter = counter % imagesArray.length;
+
   carouselImage.src = imagesArray[counter];
   stopInterval();
 });
 
 leftArrow.addEventListener('click', function () {
+  // if counter becomes 0, then go to the end of array for last image
   if (counter === 0) {
     counter = imagesArray.length;
   }
+  // decrease counter by 1 and gives back the image at the current counter
   counter = counter - 1;
   carouselImage.src = imagesArray[counter];
   stopInterval();
