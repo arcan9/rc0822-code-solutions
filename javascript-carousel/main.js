@@ -44,8 +44,46 @@ function handleClick(event) {
     } else if (event.target.id === 'btn-5') {
       carouselImage.src = imagesArray[4];
     }
+
+    // counter++;
+
+    if (counter < imagesArray.length - 1) {
+      counter++;
+    }
+
+    if (counter > 0) {
+      counter--;
+    }
+
+    // for (var i = 0; i < $dots.length; i++) {
+    //   if ($dots[i] === event.target) {
+    //     carouselImage.src = imagesArray[counter];
+    //   }
+    // }
     stopInterval();
 
   }
 }
+// startInterval();
+
+var leftArrow = document.querySelector('.left-arrow');
+var rightArrow = document.querySelector('.right-arrow');
+
+rightArrow.addEventListener('click', function () {
+  counter++;
+
+  counter = counter % imagesArray.length;
+  carouselImage.src = imagesArray[counter];
+  stopInterval();
+});
+
+leftArrow.addEventListener('click', function () {
+  if (counter === 0) {
+    counter = imagesArray.length;
+  }
+  counter = counter - 1;
+  carouselImage.src = imagesArray[counter];
+  stopInterval();
+});
+
 startInterval();
