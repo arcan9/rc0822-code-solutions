@@ -15,6 +15,7 @@ function stopInterval() {
 }
 
 function nextImgShow() {
+
   // img path is set to values in array and incremented
   carouselImage.src = imagesArray[counter++];
 
@@ -26,11 +27,23 @@ function nextImgShow() {
 startInterval();
 
 var $dotsContainer = document.querySelector('.dots-container');
+var $dots = document.querySelectorAll('.dots-container i');
 
 $dotsContainer.addEventListener('click', handleClick);
+// $dotsContainer.addEventListener('mouseover', handleMouseOver);
+// $dotsContainer.addEventListener('mouseout', handleMouseOut);
 
 function handleClick(event) {
   if (event.target.matches('i')) {
+
+    for (var i in $dots) {
+      if (event.target.className === 'fa-regular fa-circle') {
+        event.target.className = 'fa-solid fa-circle';
+        $dots[i].className = 'fa-regular fa-circle';
+      } else {
+        $dots[i].className = 'fa-regular fa-circle';
+      }
+    }
 
     if (event.target.id === 'btn-1') {
       carouselImage.src = imagesArray[0];
@@ -52,6 +65,18 @@ function handleClick(event) {
 
   }
 }
+
+// function handleMouseOver(event) {
+//   if (event.target.matches('i')) {
+//     event.target.className = 'fa-solid fa-circle';
+//   }
+// }
+
+// function handleMouseOut(event) {
+//   if (event.target.matches('i')) {
+//     event.target.className = 'fa-regular fa-circle';
+//   }
+// }
 
 var leftArrow = document.querySelector('.left-arrow');
 var rightArrow = document.querySelector('.right-arrow');
