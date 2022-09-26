@@ -23,6 +23,7 @@ function nextImgShow() {
   if (counter >= imagesArray.length) {
     counter = 0;
   }
+
 }
 startInterval();
 
@@ -30,8 +31,6 @@ var $dotsContainer = document.querySelector('.dots-container');
 var $dots = document.querySelectorAll('.dots-container i');
 
 $dotsContainer.addEventListener('click', handleClick);
-// $dotsContainer.addEventListener('mouseover', handleMouseOver);
-// $dotsContainer.addEventListener('mouseout', handleMouseOut);
 
 function handleClick(event) {
   if (event.target.matches('i')) {
@@ -66,18 +65,6 @@ function handleClick(event) {
   }
 }
 
-// function handleMouseOver(event) {
-//   if (event.target.matches('i')) {
-//     event.target.className = 'fa-solid fa-circle';
-//   }
-// }
-
-// function handleMouseOut(event) {
-//   if (event.target.matches('i')) {
-//     event.target.className = 'fa-regular fa-circle';
-//   }
-// }
-
 var leftArrow = document.querySelector('.left-arrow');
 var rightArrow = document.querySelector('.right-arrow');
 
@@ -87,6 +74,16 @@ rightArrow.addEventListener('click', function () {
   counter = counter % imagesArray.length;
 
   carouselImage.src = imagesArray[counter];
+
+  for (var i in $dots) {
+    if ($dots[counter].className === 'fa-regular fa-circle') {
+      $dots[counter].className = 'fa-solid fa-circle';
+      $dots[i].className = 'fa-regular fa-circle';
+    } else {
+      $dots[i].className = 'fa-regular fa-circle';
+    }
+  }
+
   stopInterval();
 });
 
@@ -98,6 +95,16 @@ leftArrow.addEventListener('click', function () {
   // decrease counter by 1 and gives back the image at the current counter
   counter = counter - 1;
   carouselImage.src = imagesArray[counter];
+
+  for (var i in $dots) {
+    if ($dots[counter].className === 'fa-regular fa-circle') {
+      $dots[counter].className = 'fa-solid fa-circle';
+      $dots[i].className = 'fa-regular fa-circle';
+    } else {
+      $dots[i].className = 'fa-regular fa-circle';
+    }
+  }
+
   stopInterval();
 });
 
