@@ -1,0 +1,256 @@
+body {
+  font-family: Avenir, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(170 170 170);
+}
+
+.main a {
+  text-decoration: none;
+  color: #294464;
+}
+
+.navbar a:hover,
+.navbar a:visited {
+  color: #294464;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Tiempos Headline", serif;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  font-size: 27px;
+}
+
+p {
+  line-height: 2;
+}
+
+footer {
+  overflow: hidden;
+  position: relative;
+}
+
+footer img {
+  display: block;
+  width: 150px;
+  position: relative;
+  left: 130px;
+  top: 70px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-gray {
+  color: rgb(100 100 100);
+}
+
+.text-light-gray {
+  color: rgb(170 170 170);
+}
+
+.text-align-center {
+  text-align: center;
+  width: 440px;
+}
+
+.text-align-center-2 {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.grey-bg {
+  background-color: #fafafa;
+  padding: 30px 0 75px;
+}
+
+.dark-gray-bg {
+  background-color: #525351;
+  padding: 30px 0 75px;
+  margin-top: 20px;
+  height: 400px;
+  width: 100%;
+}
+
+button {
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+  padding: 12px 38px;
+  background-color: #294464;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #294464;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #294464;
+  background-color: white;
+  border: 1px solid #294464;
+}
+
+/* NAVIGATION */
+
+nav {
+  margin: 0 135px;
+}
+
+.hr {
+  border-bottom: 1px solid lightgray;
+}
+
+ul {
+  list-style: none;
+  padding: 10px 0 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  position: relative;
+  top: 5px;
+  width: 150px;
+}
+
+.navbar button {
+  padding: 10px 12px;
+}
+
+.contact-btn {
+  padding-right: 0;
+}
+
+/* MAIN */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-container {
+  padding: 0 135px 25px;
+  margin: 50px 0;
+  width: 100%;
+  height: 600px;
+}
+
+.hero-text {
+  position: relative;
+  top: 105px;
+  left: 60px;
+  width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  width: 600px;
+}
+
+.hero-text button {
+  position: relative;
+  top: 10px;
+}
+
+.color-overlay {
+  background-color: rgb(83 83 83 / 45%);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.learn-more {
+  position: relative;
+  overflow: hidden;
+}
+
+.learn-more .ready {
+  position: relative;
+  left: 130px;
+}
+
+.learn-more button {
+  position: absolute;
+  right: 135px;
+  top: 35px;
+}
+
+.ready h2 {
+  margin-bottom: 0;
+}
+
+/* FOOTER */
+
+.canvas-address {
+  position: relative;
+  left: 130px;
+  top: 90px;
+}
+
+.canvas-address p {
+  line-height: 1.5;
+}
+
+.company {
+  position: absolute;
+  right: 520px;
+  top: 100px;
+}
+
+.product {
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+
+.company li,
+.product li {
+  display: block;
+  margin: 0 0 15px;
+}
+
+.terms {
+  padding: 20px 100px;
+}
