@@ -1,0 +1,100 @@
+.hero-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/about-us/about-us-header.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.story-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.story-container header {
+  padding: 30px 0 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.story-container h1 {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 38px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.row-2nd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.col-half {
+  margin: 0 auto 15px;
+}
+
+.col-half p {
+  margin: 12px 0;
+  width: 700px;
+}
+
+.col-third {
+  width: 40%;
+}
+
+.width-85 {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.width-70 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+span.number {
+  font-size: 36px;
+  font-family: "Tiempos Headline", serif;
+}
+
+span.list-title {
+  font-size: 20px;
+}
+
+.team-img-container {
+  width: 225px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-img-container img {
+  border-radius: 50%;
+}
+
+.member-title {
+  font-size: 14px;
+  padding: auto 20px;
+}
+
+.member-name {
+  margin-bottom: 0;
+}
+
+.member-title,
+.member-name {
+  text-align: center;
+}
+
+.our-team {
+  margin-bottom: 55px;
+}
