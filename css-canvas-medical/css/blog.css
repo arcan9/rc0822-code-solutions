@@ -36,7 +36,7 @@ div.headline input {
 
 .row {
   display: flex;
-  width: 80%;
+  width: 75%;
 }
 
 .col-half {
@@ -55,9 +55,10 @@ div.headline input {
   width: 100%;
 }
 
-/* .blog-4 {
-  height: 295px;
-} */
+.cropped {
+  height: 320px;
+  object-fit: cover;
+}
 
 ::placeholder {
   color: #ccc;
