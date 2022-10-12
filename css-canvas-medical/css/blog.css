@@ -1,0 +1,69 @@
+h1.news-headline {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.col-text-section-1 h2 {
+  color: #294464;
+}
+
+.col-text-section-1 p {
+  color: #525351;
+}
+
+div.headline h1,
+div.headline p,
+div.headline button {
+  text-align: center;
+}
+
+div.headline button {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+div.headline input {
+  padding: 20px 80px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  width: 75%;
+}
+
+.col-half {
+  flex-basis: calc(100% / 2);
+  text-align: center;
+  padding: 20px;
+}
+
+.col-text-section-1 {
+  text-align: left;
+}
+
+.news-container {
+  padding: 0 135px 25px;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.cropped {
+  height: 320px;
+  object-fit: cover;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.main {
+  margin-bottom: 50px;
+}
