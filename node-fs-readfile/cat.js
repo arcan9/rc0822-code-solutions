@@ -1,14 +1,16 @@
-// IN PROGRESS. NOT DONE WITH THIS EXERCISE
-
 const fs = require('fs');
 
 const argv = process.argv;
 
 const [, , ...txtFiles] = argv;
 
-fs.readFile(txtFiles, (err, data) => {
-  if (err) {
-    console.log(err);
-  }
+for (let i = 0; i < txtFiles.length; i++) {
+  fs.readFile(txtFiles[i], 'utf-8', (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log(data);
+  });
+}
 
-});
+console.log('txtFiles:', txtFiles);
