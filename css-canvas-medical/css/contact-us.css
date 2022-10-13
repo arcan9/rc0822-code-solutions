@@ -1,0 +1,54 @@
+h2 {
+  font-size: 38px;
+}
+
+.row {
+  display: flex;
+  margin: 50px 0;
+  width: 85%;
+}
+
+.col-half {
+  flex-basis: calc(100% / 2);
+  padding: 20px;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+  padding: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+  display: block;
+  margin: 13px;
+  width: 580px;
+}
+
+.form-inputs button {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.get-in-touch {
+  width: 75%;
+}
+
+.get-in-touch p {
+  font-size: 18px;
+}
+
+.get-in-touch .number {
+  font-size: 28px;
+  color: #294464;
+}
+
+::placeholder {
+  text-align: center;
+  color: #ccc;
+  font-family: Avenir, sans-serif;
+  padding: 0;
+}
