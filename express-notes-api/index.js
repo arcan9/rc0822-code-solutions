@@ -1,20 +1,18 @@
 const express = require('express');
-const dataJSON = require('./data.json');
+const data = require('./data.json');
 const fs = require('fs');
 
-const dataNotes = dataJSON.notes;
+const dataNotes = data.notes;
 const app = express();
 app.use(express.json());
 
-let dataNextId = dataJSON.nextId;
+let dataNextId = data.nextId;
 
 // get entire list of notes
 app.get('/api/notes', (req, res) => {
   const arr = [];
-  if (Object.keys(dataNotes).length >= 0) {
-    for (const id in dataNotes) {
-      arr.push(dataNotes[id]);
-    }
+  for (const id in dataNotes) {
+    arr.push(dataNotes[id]);
   }
   res.json(arr);
 });
@@ -40,10 +38,10 @@ app.post('/api/notes', (req, res) => {
     res.status(400).json({ error: 'content is a required field' });
   } else {
     const id = dataNextId++;
-    newNotesObj.id = id;
     dataNotes[id] = newNotesObj;
+    newNotesObj.id = id;
 
-    fs.writeFile('data.json', JSON.stringify(dataJSON, null, 2), err => {
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'unexpected error occured' });
@@ -56,19 +54,47 @@ app.post('/api/notes', (req, res) => {
 
 // deletes a note by id in data.json
 app.delete('/api/notes/:id', (req, res) => {
-  const id = req.params.id;
-  if (parseInt(id) < 0) {
+  const id = parseInt(req.params.id);
+  if (id < 0) {
     res.status(400).json({ error: 'id must be a positive integer' });
   } else if (!dataNotes[id]) {
     res.status(404).json({ error: `No note matches the id ${id}` });
   } else {
-    fs.writeFile('data.json', JSON.stringify(dataJSON, null, 2), err => {
-      delete dataNotes[id];
+    delete dataNotes[id];
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'unexpected error occured' });
       } else {
         res.sendStatus(204);
+      }
+    });
+  }
+});
+
+// existing notes can be edited
+app.put('/api/notes/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const content = req.body.content;
+  const newNotesObj = req.body;
+
+  if (id < 0 || !content) {
+    if (id < 0) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+    } else if (!content) {
+      res.status(400).json({ error: 'content is a required field' });
+    }
+  } else if (!dataNotes[id] && content) {
+    res.status(404).json({ error: `No note matches the id ${id}` });
+  } else {
+    dataNotes[id] = newNotesObj;
+    newNotesObj.id = id;
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'unexpected error occured' });
+      } else {
+        res.status(200).json(newNotesObj);
       }
     });
   }
