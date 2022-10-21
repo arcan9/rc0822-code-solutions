@@ -1,4 +1,3 @@
-SELECT "storeId",
+SELECT
   count(*) as "totalDVDs"
-  FROM "inventory"
-  GROUP BY "storeId";
+  FROM "inventory";
