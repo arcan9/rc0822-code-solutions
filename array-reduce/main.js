@@ -20,12 +20,12 @@ const traits = [
 const sum = numbers.reduce((total, num) => {
   return total + num;
 }, 0);
-console.log(sum);
+console.log('sum:', sum);
 
 const product = numbers.reduce((total, num) => {
   return total * num;
 }, 1);
-console.log(product);
+console.log('product:', product);
 
 const balance = account.reduce((total, account) => {
   if (account.type === 'deposit') {
@@ -35,10 +35,10 @@ const balance = account.reduce((total, account) => {
   }
   return total;
 }, 0);
-console.log(balance);
+console.log('balance total:', balance);
 
 const composite = traits.reduce((newObj, traits) => {
   newObj = Object.assign(newObj, traits);
   return newObj;
 }, {});
-console.log(composite);
+console.log('composite object:', composite);
