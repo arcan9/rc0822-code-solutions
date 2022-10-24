@@ -9,16 +9,16 @@ const languages = [
 ];
 
 const doubled = numbers.map(number => number * 2);
-console.log(doubled);
+console.log('doubled:', doubled);
 
 const prices = numbers.map(price => {
   const fixedPoint = price.toFixed(2);
   return `$${fixedPoint}`;
 });
-console.log(prices);
+console.log('prices:', prices);
 
 const upperCased = languages.map(language => language.toUpperCase());
-console.log(upperCased);
+console.log('upperCased:', upperCased);
 
 const firstLetters = languages.map(language => language.charAt(0));
-console.log(firstLetters);
+console.log('firstLetters:', firstLetters);
