@@ -3,8 +3,7 @@
 // const { createElement, noop } = require('../lib');
 import TodoForm from './todo-form';
 import TodoList from './todo-list';
-import * as lib from '../lib';
-const { createElement, noop } = lib;
+import { createElement, noop } from '../lib';
 
 export default class TodoApp {
   constructor(container, nextId, todos, onUpdate = noop) {

@@ -1,6 +1,5 @@
 // const { createElement } = require('../lib');
-import * as lib from '../lib';
-const { createElement } = lib;
+import { createElement } from '../lib';
 
 export default class TodoForm {
   constructor(onSubmit) {
