@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col-2 {
+  width: 50px;
+}
+
+.toggle-bg {
+  position: relative;
+  width: 40px;
+  height: 18px;
+  border-radius: 50px;
+  background: #ccc;
+  display: inline-block;
+}
+
+.toggle-label {
+  cursor: pointer;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-input:checked + .toggle-bg {
+  background: green;
+}
+
+.toggle-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 22px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgb(90 89 89);
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-input:checked + .toggle-bg::after {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
