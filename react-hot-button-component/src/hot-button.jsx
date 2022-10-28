@@ -20,13 +20,13 @@ export default class HotButton extends React.Component {
 
     if (this.state.numberOfClicks < 3) {
       btnClass = 'btn';
-    } else if (this.state.numberOfClicks === 3 || this.state.numberOfClicks < 6) {
+    } else if (this.state.numberOfClicks < 6) {
       btnClass = 'btn-dark-purple';
-    } else if (this.state.numberOfClicks === 6 || this.state.numberOfClicks < 9) {
+    } else if (this.state.numberOfClicks < 9) {
       btnClass = 'btn-light-purple';
-    } else if (this.state.numberOfClicks === 9 || this.state.numberOfClicks < 12) {
+    } else if (this.state.numberOfClicks < 12) {
       btnClass = 'btn-red';
-    } else if (this.state.numberOfClicks === 12 || this.state.numberOfClicks < 15) {
+    } else if (this.state.numberOfClicks < 15) {
       btnClass = 'btn-orange';
     } else if (this.state.numberOfClicks === 15 || this.state.numberOfClicks < 18) {
       btnClass = 'btn-yellow';
