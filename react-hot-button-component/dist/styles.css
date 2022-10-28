@@ -1,0 +1,38 @@
+.btn {
+  background-color: #ccc;
+  color: #000;
+  border: 1px solid;
+}
+
+.btn-dark-purple {
+  background-color: rgb(60 31 87);
+  color: #fff;
+}
+
+.btn-light-purple {
+  background-color: rgb(108 68 146);
+  color: #fff;
+}
+
+.btn-red {
+  background-color: rgb(189 80 94);
+  color: #fff;
+}
+
+.btn-orange {
+  background-color: rgb(223 160 119);
+  color: #000;
+  border: 1px solid;
+}
+
+.btn-yellow {
+  background-color: rgb(255 247 135);
+  color: #000;
+  border: 1px solid;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid;
+}
