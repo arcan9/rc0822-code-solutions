@@ -10,7 +10,6 @@ export default class Stopwatch extends React.Component {
     this.handleStart = this.handleStart.bind(this);
     this.reset = this.reset.bind(this);
     this.tick = this.tick.bind(this);
-    this.stop = this.stop.bind(this);
   }
 
   handleStart() {
@@ -46,10 +45,6 @@ export default class Stopwatch extends React.Component {
         elapsedSeconds: this.state.elapsedSeconds + 1
       });
     }, 1000);
-  }
-
-  stop() {
-    clearInterval(this.intervalId);
   }
 
   render() {
