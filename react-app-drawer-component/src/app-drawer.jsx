@@ -12,6 +12,7 @@ export default class AppDrawer extends React.Component {
       ]
     };
     this.showModal = this.showModal.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   showModal() {
@@ -20,25 +21,44 @@ export default class AppDrawer extends React.Component {
     });
   }
 
+  handleClick() {
+    this.setState({
+      showModal: false
+    });
+  }
+
   render() {
-    let ulList = 'display-menu';
+    let menuDisplay = 'hidden';
+    let overlay = '';
+    let bars = 'fa fa-bars';
 
     const listItems = this.state.list.map(item =>
-      <li key={item.id}>
+      <li key={item.id} onClick={this.handleClick}>
         {item.name}
       </li>
     );
 
     if (this.state.showModal) {
-      ulList = '';
+      menuDisplay = '';
+      overlay = 'apply-overlay';
+      bars = 'fa fa-bars hidden';
     }
 
     return (
-      <div>
-        <div>
-          <ul className={ulList}>{listItems}</ul>
+      <div className='container'>
+        <div className='sidebar'>
+          <div
+          className={overlay}
+          onClick={this.handleClick}>
+          </div>
+          <div className={`list-modal ${menuDisplay}`}>
+            <div className='menu'>Menu</div>
+            <ul>{listItems}</ul>
+          </div>
         </div>
-        <button onClick={this.showModal}>Show Modal</button>
+        <i
+        className={bars}
+        onClick={this.showModal}></i>
       </div>
     );
   }
