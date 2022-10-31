@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-circle {
+  font-size: 70px;
+}
+
+.count {
+  position: relative;
+  top: -52px;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.play {
+  position: relative;
+  left: 28px;
+  bottom: 32px;
+  cursor: pointer;
+}
