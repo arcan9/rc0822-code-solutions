@@ -4,41 +4,61 @@ export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currImgIndex: 0
+      currentIndex: 0
     };
+    this.nextImage = this.nextImage.bind(this);
+    this.previousImage = this.previousImage.bind(this);
   }
 
-  startInterval() {
-    this.timerId = setInterval(this.showNext, 3000);
+  componentDidMount() {
+    this.timerId = setInterval(this.nextImage, 3000);
   }
 
-  stopInterval() {
+  componentWillUnmount() {
     clearInterval(this.timerId);
   }
 
-  showNext() {
+  previousImage() {
+    const lastIndex = this.props.images.length - 1;
+    let index = this.state.currentIndex;
 
+    if (this.state.currentIndex === 0) {
+      index = lastIndex;
+    } else {
+      index = this.state.currentIndex - 1;
+    }
+    this.setState({
+      currentIndex: index
+    });
   }
 
   nextImage() {
     const lastIndex = this.props.images.length - 1;
-    const
+    let index = this.state.currentIndex;
+
+    if (this.state.currentIndex === lastIndex) {
+      index = 0;
+    } else {
+      index = this.state.currentIndex + 1;
+    }
+    this.setState({
+      currentIndex: index
+    });
   }
 
   render() {
-    const imageUrl = this.props.images[this.state.counter];
-    console.log(imageUrl);
+    const imageUrl = this.props.images[this.state.currentIndex];
 
     return (
       <div className="container">
         <div className="left-arrow">
-          <i className="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left" onClick={this.previousImage}></i>
         </div>
         <div className="carousel">
-          <img src="../images/001.png" className="carousel-image"></img>
+          <img src={imageUrl} className="carousel-image"></img>
         </div>
         <div className="right-arrow">
-          <i className="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right" onClick={this.nextImage}></i>
         </div>
       </div>
     );
