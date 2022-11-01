@@ -8,6 +8,7 @@ export default class Carousel extends React.Component {
     };
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
+    this.handleClickDot = this.handleClickDot.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +47,33 @@ export default class Carousel extends React.Component {
     });
   }
 
+  handleClickDot(event) {
+    const index = event.target.getAttribute('id');
+    const parsedIndex = parseInt(index);
+    this.setState({
+      currentIndex: parsedIndex
+    });
+  }
+
+  getDots() {
+    return (
+      this.props.images.map((element, index) => {
+        let dotClassName = '';
+
+        if (index === this.state.currentIndex) {
+          dotClassName = 'solid';
+        } else {
+          dotClassName = 'regular';
+        }
+        return <i key={index}
+        className={`fa-${dotClassName} fa-circle`}
+        onClick={this.handleClickDot}
+        id={index}>
+        </i>;
+      })
+    );
+  }
+
   render() {
     const imageUrl = this.props.images[this.state.currentIndex];
 
@@ -56,6 +84,9 @@ export default class Carousel extends React.Component {
         </div>
         <div className="carousel">
           <img src={imageUrl} className="carousel-image"></img>
+          <div className='dots-container'>
+            {this.getDots()}
+          </div>
         </div>
         <div className="right-arrow">
           <i className="fa-solid fa-chevron-right" onClick={this.nextImage}></i>
