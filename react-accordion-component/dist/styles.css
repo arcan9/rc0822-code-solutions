@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.title {
+  cursor: pointer;
+  background-color: rgb(202 202 188);
+  margin: 0 auto;
+  border: 2px black solid;
+  padding: 15px;
+}
+
+/* .accordion > .wrapper:not(:last-child) > .title {
+  border-bottom: none;
+} */
