@@ -1,0 +1,74 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  text-align: left;
+  margin: 0 20px;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.root {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.apply-overlay {
+  background: rgb(0 0 0 / 75%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.list-modal {
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  width: 150px;
+  height: 100vh;
+}
+
+.fa-bars {
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu {
+  text-align: left;
+  margin: 25px 20px 12px;
+  font-size: 21px;
+}
