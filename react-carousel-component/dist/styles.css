@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  width: 450px;
+  padding: 20px;
+}
+
+.dots-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.dots-container i {
+  margin: 0 10px;
+  font-size: 1.25rem;
+}
+
+.left-arrow i,
+.right-arrow i {
+  font-size: 3rem;
+}
+
+.left-arrow,
+.right-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.dots-container i:hover,
+.left-arrow:hover,
+.right-arrow:hover {
+  cursor: pointer;
+}
+
+.left-arrow:active,
+.right-arrow:active {
+  color: red;
+}
