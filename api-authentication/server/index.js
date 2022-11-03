@@ -88,7 +88,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
           }
           const payload = {
             userId: login.userId,
-            username: login.username
+            username
           };
           const token = jwt.sign(payload, process.env.TOKEN_SECRET);
           res.json({
