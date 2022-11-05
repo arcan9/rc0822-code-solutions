@@ -1,0 +1,30 @@
+1) User can sign up:
+- User clicks 'Sign Up' on the navbar and a hashchange event is fired, which updates the route property of the App's state (#sign-up)
+- The text on the page changes to 'Create an account' to reflect the change in state.
+- The user types in their username and password in the form and clicks 'Register'.
+  - Clicking 'Register' fires a submit event on the form, then the client sends a fetch request of POST to the server.
+- Server checks for a valid username and password
+  - If inputs are valid, server hashes the password and queries the database to create the new user
+- Server returns a status code for success or failure.
+  - If it's a success, then server returns the new user object.
+
+2) User can sign in:
+- User clicks 'Sign In' on navbar and a hashchange event is fired on the button, which updates the roue property of the App's state (#sign-in)
+- The text on the page changes to 'Please sign in' to reflect the change in state.
+- The user types in their username and password in the form and clicks 'Log In.'
+  - Clicking 'Log In' fires a submit event on the form, then the client sends a fetch request of POST to the server.
+- Server checks for a matching username and password.
+  - If username matches a user in the database, the server hashes the password and compares it with the hashed passoword already in the database.
+  - If the passwords match, the server issues the client a JSON Web Token as they've successfully proven their identity.
+- Once token is issued, the client is able to log in, the user property of the App's state is updated, and the page is re-rendered.
+- The user is led to the Home page where they see the GIF.
+
+3) User can stay signed in (even on refresh):
+- When user refreshes the page, the browser looks for the 'react-context-jwt' key with a stored value of the issued token in the local storage.
+- If the token exists, the user session (in App state) is preserved as the user, so they stay logged in.
+- If the token doesn't exist, the user is led to the Home page and will have to sign in or sign up.
+
+4) User can sign out:
+- When user clicks on 'Sign Out', the 'react-context-jwt' key and token value are removed from the local storage of the browser.
+- A hashchange event is fired on the Sign Out button, and the user property of the App's state returns to null.
+- The user is led back to Home page which shows the sign in form.
