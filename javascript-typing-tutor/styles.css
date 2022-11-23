@@ -1,0 +1,27 @@
+body {
+  font-family: Arvo, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+p {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: -5px;
+  word-spacing: 8px;
+}
+
+span.correct {
+  color: rgb(126 181 42);
+}
+
+span.wrong {
+  color: red;
+}
+
+span.current {
+  color: black;
+}
